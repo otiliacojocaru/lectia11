@@ -1,0 +1,38 @@
+:root{
+    --bg-color:gray;
+    }
+
+@mixin centerelement{
+    display: grid;
+    place-items: center;
+}
+
+@mixin square ($h: 150px, $w:150px)  {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    height: $h;
+    width: $w;
+    cursor: pointer;
+    border: 2px solid white;
+    opacity: 50%;
+}
+
+@mixin squareColor($bgColor:rgba(107, 14, 14, 0.708)) {
+    background-color: $bgColor;
+    outline: 3px solid $bgColor;
+}
+
+@mixin phone-only {
+    @media (max-widith: 500px){
+        @content;
+    }
+    
+}
+
+@mixin tableta {
+    @media (max-width:700px) {
+        @content;
+    }
+}

@@ -1,0 +1,64 @@
+:root {
+  --bg-color:gray;
+}
+
+.container {
+  display: flex;
+  gap: 32px;
+}
+@media (max-widith: 500px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.block__square {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  height: 75px;
+  width: 150px;
+  cursor: pointer;
+  border: 2px solid white;
+  opacity: 50%;
+  display: grid;
+  place-items: center;
+  background-color: var(--bg-color);
+}
+.block__square--color {
+  background-color: var(--square-color, black);
+  outline: 3px solid var(--square-color, black);
+}
+@media (max-widith: 500px) {
+  .block__square {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    height: 30px;
+    width: 60px;
+    cursor: pointer;
+    border: 2px solid white;
+    opacity: 50%;
+  }
+}
+@media (max-width: 700px) {
+  .block__square {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    border: 2px solid white;
+    opacity: 50%;
+  }
+}
+.block__input {
+  display: none;
+}
+.block__input:checked ~ .block__square {
+  opacity: 1;
+}/*# sourceMappingURL=styles.css.map */

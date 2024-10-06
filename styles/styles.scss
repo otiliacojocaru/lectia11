@@ -1,0 +1,37 @@
+
+@import 'mixins.scss';
+
+
+.container{
+    display: flex;
+    gap: 32px;
+    @include phone-only{
+        flex-direction: column;
+    }
+}
+
+.block{
+    &__square{
+        @include square(75px, 150px);
+        @include centerelement();
+        background-color: var(--bg-color);
+        
+        &--color{
+            @include squareColor(var(--square-color, black));
+        }
+        @include phone-only {
+            @include square(30px, 60px);
+        }
+        @include tableta{
+            @include square(50px, 100px);
+        }
+       
+    }
+
+    &__input {
+        display: none;
+        &:checked ~.block__square {
+            opacity: 1;
+        }
+    }
+}
